@@ -1,4 +1,4 @@
-# 智能视觉实验室官网
+# [智能视觉实验室官网](https://visualintelligencelab.github.io/)
 
 原生 HTML / CSS / JavaScript 静态网站，无需安装依赖。保留六个页面的原有地址，可直接双击 `index.html` 浏览。
 
@@ -58,8 +58,8 @@ npm run check
 
 将六个 HTML 文件和整个 `assets/` 文件夹一起上传到静态托管目录即可，无需构建。`scripts/`、`package.json` 和本文档用于源码维护，不必放入部署产物。
 
-## GitHub 仓库
+## [GitHub 仓库](https://github.com/VisualIntelligenceLab/visualintelligencelab.github.io)
 
-网站源码仓库：`VisualIntelligenceLab/visualintelligencelab.github.io`。仓库包含全部页面、公共资源、维护文档及本地预览和检查脚本。仓库名遵循 GitHub Pages 对用户站点的小写命名要求。
+网站源码仓库：[VisualIntelligenceLab/visualintelligencelab.github.io](https://github.com/VisualIntelligenceLab/visualintelligencelab.github.io)。仓库包含全部页面、公共资源、维护文档及本地预览和检查脚本。仓库名遵循 GitHub Pages 对用户站点的小写命名要求。
 
-推送源码后，如需通过 GitHub Pages 发布，可在仓库 Settings → Pages 中选择 `main` 分支和 `/ (root)` 目录。发布后官网地址为 `https://visualintelligencelab.github.io/`。源码推送与启用 Pages 是两个独立步骤。
+网站已通过 GitHub Pages 发布，官网地址：[https://visualintelligencelab.github.io/](https://visualintelligencelab.github.io/)。发布源为 `main` 分支的 `/ (root)` 目录，后续推送会自动更新网站。发布配置可在仓库 [Settings → Pages](https://github.com/VisualIntelligenceLab/visualintelligencelab.github.io/settings/pages) 中查看。
