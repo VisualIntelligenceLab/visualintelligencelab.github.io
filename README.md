@@ -60,6 +60,6 @@ npm run check
 
 ## GitHub 仓库
 
-网站源码仓库：`VisualIntelligenceLab/VisualIntelligenceLab.github.io`。仓库包含全部页面、公共资源、维护文档及本地预览和检查脚本。
+网站源码仓库：`VisualIntelligenceLab/visualintelligencelab.github.io`。仓库包含全部页面、公共资源、维护文档及本地预览和检查脚本。仓库名遵循 GitHub Pages 对用户站点的小写命名要求。
 
 推送源码后，如需通过 GitHub Pages 发布，可在仓库 Settings → Pages 中选择 `main` 分支和 `/ (root)` 目录。发布后官网地址为 `https://visualintelligencelab.github.io/`。源码推送与启用 Pages 是两个独立步骤。
