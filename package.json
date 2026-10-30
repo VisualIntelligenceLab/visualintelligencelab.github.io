@@ -1,0 +1,10 @@
+{
+  "name": "vil-lab-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Visual Intelligence Lab static website",
+  "scripts": {
+    "dev": "node scripts/preview.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

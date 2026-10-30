@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成果与开源 · 智能视觉实验室</title>
+<meta name="description" content="VIL 的论文、开源仓库与复现资源，以及 GitHub、Gitee、GitCode、ModelScope、OpenDataLab 和 Hugging Face 社区账号。">
+<meta name="theme-color" content="#faf9f6">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="publications">
+<a class="skip-link" href="#main-content">跳到正文</a>
+<div id="site-header"></div>
+<noscript><p class="wrap note">请启用 JavaScript 以显示导航。<a href="index.html">首页</a> · <a href="research.html">研究方向</a> · <a href="publications.html">成果与开源</a> · <a href="team.html">团队</a> · <a href="join.html">加入我们</a> · <a href="portal.html">成员入口</a></p></noscript>
+
+<main id="main-content" tabindex="-1">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Publications &amp; Open Source</p>
+      <h1>论文是结果，<br>代码才是证据。</h1>
+      <p class="lede">实验室要求每篇论文附带可复现代码：一条命令跑通、写清硬件与随机种子、给出与论文一致的指标表。做不到的，不投。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="idx">01</span> <h2>开源仓库</h2></div>
+        <a class="more" href="https://github.com/VisualIntelligenceLab" target="_blank" rel="noopener noreferrer">GitHub 主页 ↗</a>
+      </div>
+      <div class="grid-2 repo-grid">
+        <article class="card">
+          <div class="kicker">Toolkit</div>
+          <h3>vil-utils</h3>
+          <p>训练脚手架：配置管理、日志、断点续训、指标汇总。所有项目的公共底座。</p>
+          <p class="repo-meta">Python · MIT</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Detection</div>
+          <h3>vil-det-infrared-small-object</h3>
+          <p>红外小目标检测的复现代码与数据说明，含全局注意力与多尺度动态卷积的消融配置。</p>
+          <p class="repo-meta">PyTorch · 复现中</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Reading list</div>
+          <h3>vil-paper-list</h3>
+          <p>按方向整理的文献表：检测、跟踪、生成、量化、世界模型、机器人、医疗。每条注明是否复现。</p>
+          <p class="repo-meta">Markdown · CC BY 4.0</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Template</div>
+          <h3>vil-repo-template</h3>
+          <p>新仓库模板：README 规范、许可证、贡献指南、CI、issue 模板、pre-commit。</p>
+          <p class="repo-meta">开箱即用 · MIT</p>
+          <p class="small"><a href="https://www.kdocs.cn/l/csHQa6sa1dvi" rel="noopener">下载模板包 →</a></p>
+        </article>
+      </div>
+      <p class="small muted note">GitHub 为主仓（<a href="https://github.com/VisualIntelligenceLab" target="_blank" rel="noopener noreferrer">VisualIntelligenceLab</a>）；<a href="https://gitee.com/VisualIntelligenceLab" target="_blank" rel="noopener noreferrer">Gitee</a> 与 <a href="https://gitcode.com/VisualIntelligenceLab" target="_blank" rel="noopener noreferrer">GitCode</a> 为只读镜像，提交与 issue 只在 GitHub。新仓库一律从上面的模板包起，规范见《开源组织与仓库规范》。</p>
+      <h3 class="note">开源社区主页</h3>
+      <p class="small muted">通过以下账号主页查看实验室的代码、模型与数据资源。链接在新标签页打开。</p>
+      <div class="portal-grid" data-platform-links></div>
+      <noscript><p>完整平台入口需启用 JavaScript；<a href="https://www.modelscope.cn/profile/VisualIntelligence">ModelScope</a> · <a href="https://huggingface.co/VisualIntelligence">Hugging Face</a></p></noscript>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><span class="idx">02</span> <h2>论文与知识产权</h2></div></div>
+      <p class="lede intro">论文清单按年度归档，录用后两周内上线；专利与软件著作权在申请提交后再公开，避免影响新颖性。</p>
+      <table>
+        <thead><tr><th>类型</th><th>状态</th><th>公开方式</th></tr></thead>
+        <tbody>
+          <tr><td>期刊 / 会议论文</td><td>录用后 2 周</td><td>本页 +  arXiv / 出版方链接 + 代码仓库</td></tr>
+          <tr><td>预印本</td><td>投稿即挂</td><td>arXiv，附复现说明</td></tr>
+          <tr><td>专利</td><td>申请提交后</td><td>仅公布名称与申请号，不公开实施细节</td></tr>
+          <tr><td>软件著作权</td><td>登记完成后</td><td>名称、登记号、对应仓库</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><span class="idx">03</span> <h2>怎么用我们的代码</h2></div></div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="kicker">Step 1</div>
+          <h3>克隆与环境</h3>
+          <p>按 README 用 conda 建环境，先跑 smoke test，确认 CUDA 可用再训练。</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Step 2</div>
+          <h3>复现基线</h3>
+          <p>用给定配置复现论文指标，差距超过 5% 先别改模型，查数据与预处理。</p>
+        </article>
+        <article class="card">
+          <div class="kicker">Step 3</div>
+          <h3>提 issue</h3>
+          <p>带上环境、命令、日志三段信息。我们承诺 3 个工作日内首次响应。</p>
+        </article>
+      </div>
+      <p class="small muted note">代码默认 MIT；文档 CC BY 4.0；模型权重单独许可，商用请联系 visualintelligence@163.com。</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2>想复现我们的工作，或一起改？</h2>
+        <p class="muted">欢迎提 issue、PR，也欢迎带着问题来读研。</p>
+      </div>
+      <a class="btn" href="join.html">加入我们</a>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

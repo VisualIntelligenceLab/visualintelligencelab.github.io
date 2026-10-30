@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 455" fill="none">
+  <style>
+    /* Animate within the SVG so it also works as an external img over file://. */
+    .meridian {
+      transform-box: view-box;
+      transform-origin: 275px 208px;
+      animation: globe-turn 20s linear infinite;
+    }
+    @keyframes globe-turn {
+      0%, 100% { transform: scaleX(1); opacity: .45; }
+      12.5%, 87.5% { transform: scaleX(.7071); opacity: .65; }
+      25%, 75% { transform: scaleX(0); opacity: .85; }
+      37.5%, 62.5% { transform: scaleX(-.7071); opacity: .65; }
+      50% { transform: scaleX(-1); opacity: .45; }
+    }
+    .trajectory-flow { animation: trajectory-flow 7s linear infinite; }
+    @keyframes trajectory-flow { to { stroke-dashoffset: -100; } }
+    .signal {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: signal 4s ease-out infinite;
+    }
+    @keyframes signal {
+      0%, 100% { transform: scale(.8); opacity: .15; }
+      35% { opacity: .55; }
+      85% { transform: scale(1.7); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .meridian, .trajectory-flow, .signal { animation: none; }
+      .trajectory-flow { display: none; }
+    }
+  </style>
+  <defs>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" stroke="#dcded3" stroke-width=".6"/></pattern>
+    <clipPath id="orb"><circle cx="275" cy="208" r="142"/></clipPath>
+  </defs>
+  <path fill="url(#grid)" d="M20 26h480v390H20z"/>
+  <g stroke="#b8bfae" stroke-width=".8">
+    <path d="m23 342 253-108 223 108M23 342h476M59 326h406M97 310h336M134 294h263M173 278h187M212 262h112M251 246h37M95 390l181-156 152 156M170 390l106-156 73 156M248 390l28-156-5 156M23 390l253-156 223 156"/>
+  </g>
+  <circle cx="275" cy="208" r="142" fill="#eeeee6" fill-opacity=".85" stroke="#929e88"/>
+  <g clip-path="url(#orb)" stroke="#9ca98f" stroke-width=".75">
+    <!-- Staggered half-meridians project a rotation about the vertical axis. -->
+    <path class="meridian" style="animation-delay:0s" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-2.5s" transform="translate(275 208) scale(.7071 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-5s" transform="translate(275 208) scale(0 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-7.5s" transform="translate(275 208) scale(-.7071 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-10s" transform="translate(275 208) scale(-1 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-12.5s" transform="translate(275 208) scale(-.7071 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-15s" transform="translate(275 208) scale(0 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <path class="meridian" style="animation-delay:-17.5s" transform="translate(275 208) scale(.7071 1) translate(-275 -208)" d="M275 66a142 142 0 0 1 0 284"/>
+    <ellipse cx="275" cy="208" rx="142" ry="33"/><ellipse cx="275" cy="208" rx="142" ry="78"/><ellipse cx="275" cy="208" rx="142" ry="117"/>
+    <path d="M133 208h284M275 66v284"/>
+  </g>
+  <path d="M66 309c68-2 57-151 141-123s80 99 143 38 76-62 128-50" stroke="#843d35" stroke-width="2"/>
+  <path d="M66 309c68-2 57-151 141-123s80 99 143 38 76-62 128-50" stroke="#faf9f6" stroke-width="6" opacity=".1"/>
+  <path class="trajectory-flow" d="M66 309c68-2 57-151 141-123s80 99 143 38 76-62 128-50" pathLength="100" stroke="#b9654b" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 97"/>
+  <g stroke="#843d35" stroke-width="1">
+    <circle class="signal" cx="207" cy="186" r="10"/>
+    <circle class="signal" style="animation-delay:-2s" cx="397" cy="185" r="12"/>
+  </g>
+  <g fill="#843d35" stroke="#faf9f6" stroke-width="3"><circle cx="118" cy="256" r="5"/><circle cx="207" cy="186" r="5"/><circle cx="298" cy="254" r="5"/><circle cx="397" cy="185" r="6"/></g>
+  <g stroke="#843d35" stroke-width="1.4"><path d="M374 176v-14h14M406 162h14v14M420 196v14h-14M388 210h-14v-14"/><path d="M187 178v-12h12M215 166h12v12M227 194v12h-12M199 206h-12v-12"/></g>
+  <path d="M397 162V107h64M207 166v-45H95M298 254v103h76" stroke="#843d35" stroke-width=".8" stroke-dasharray="3 4"/>
+  <g fill="#656b64" font-family="Consolas,monospace" font-size="9" letter-spacing="1">
+    <text x="26" y="19">VIL / SPATIOTEMPORAL FIELD</text><text x="391" y="100">PERCEPTION</text><text x="46" y="113">TRAJECTORY</text><text x="319" y="371">WORLD MODEL</text><text x="26" y="435">X / Y / T</text><text x="381" y="435">RESEARCH CONCEPT</text>
+  </g>
+  <g stroke="#843d35"><path d="M20 39V26h13M487 26h13v13M20 403v13h13M487 416h13v-13"/></g>
+</svg>

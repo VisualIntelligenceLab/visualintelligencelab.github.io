@@ -1,0 +1,17 @@
+# Local dependencies and generated output
+node_modules/
+dist/
+coverage/
+.cache/
+*.log
+
+# Local environment and editor state
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

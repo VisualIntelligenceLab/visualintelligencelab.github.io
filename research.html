@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>研究方向 · 智能视觉实验室</title>
+<meta name="description" content="VIL 的十个研究方向：世界模型、免校准量化、轨迹可控视频生成、虚实共生、目标检测、目标跟踪、机器人、医疗多源建模、多智能体、4D 世界。">
+<meta name="theme-color" content="#faf9f6">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="research">
+<a class="skip-link" href="#main-content">跳到正文</a>
+<div id="site-header"></div>
+<noscript><p class="wrap note">请启用 JavaScript 以显示导航。<a href="index.html">首页</a> · <a href="research.html">研究方向</a> · <a href="publications.html">成果与开源</a> · <a href="team.html">团队</a> · <a href="join.html">加入我们</a> · <a href="portal.html">成员入口</a></p></noscript>
+
+<main id="main-content" tabindex="-1">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Research</p>
+      <h1>以可复现的研究，<br>探索视觉智能。</h1>
+      <p class="lede">我们不按论文热点排方向，而按“问题能不能被验证”排。每个方向都要求：有基线、有指标、有对照、有能被别人跑通的代码。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <nav class="research-index" aria-label="研究方向索引">
+        <a href="#wld">01 世界模型</a><a href="#qnt">02 免校准量化</a>
+        <a href="#gen">03 视频生成</a><a href="#sym">04 虚实共生</a>
+        <a href="#det">05 目标检测</a><a href="#trk">06 目标跟踪</a>
+        <a href="#rob">07 机器人视觉</a><a href="#med">08 医疗建模</a>
+        <a href="#mas">09 多智能体</a><a href="#4d">10 4D 世界</a>
+      </nav>
+      <div class="research">
+
+        <article class="dir" id="wld">
+          <div class="no">01</div>
+          <div>
+            <h3>世界模型</h3>
+            <p>让模型学会预测“动作之后世界会变成什么样”。关注长时预测的漂移、物理一致性，以及在有限算力下的可训练性。</p>
+            <div class="tags"><span class="tag">预测</span><span class="tag">物理一致性</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="qnt">
+          <div class="no">02</div>
+          <div>
+            <h3>免校准量化</h3>
+            <p>不使用校准数据，仅凭模型自身先验完成训练后量化。目标是让量化在数据不可得的场景（医疗、涉密）真正可用。</p>
+            <div class="tags"><span class="tag">PTQ</span><span class="tag">低比特</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="gen">
+          <div class="no">03</div>
+          <div>
+            <h3>轨迹可控的视频生成</h3>
+            <p>给定运动轨迹与物理条件，生成符合约束的红外视频。难点不在画质，而在“轨迹听话”与“物理不崩”。</p>
+            <div class="tags"><span class="tag">扩散模型</span><span class="tag">红外</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="sym">
+          <div class="no">04</div>
+          <div>
+            <h3>虚实共生</h3>
+            <p>把仿真数据与真实数据接在一起：仿真补长尾，真实校偏差。研究域差距的度量与可控生成。</p>
+            <div class="tags"><span class="tag">仿真</span><span class="tag">域适应</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="det">
+          <div class="no">05</div>
+          <div>
+            <h3>目标检测</h3>
+            <p>红外小目标、复杂背景、低信噪比。用全局注意力与多尺度动态卷积换取召回，同时控制误检。</p>
+            <div class="tags"><span class="tag">小目标</span><span class="tag">红外</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="trk">
+          <div class="no">06</div>
+          <div>
+            <h3>目标跟踪</h3>
+            <p>多目标关联与身份保持。重点解决遮挡、相似目标与长时跟踪中的 ID 跳变。</p>
+            <div class="tags"><span class="tag">MOT</span><span class="tag">重识别</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="rob">
+          <div class="no">07</div>
+          <div>
+            <h3>机器人视觉</h3>
+            <p>手眼标定、抓取位姿估计、微振动测量。要求算法在真实设备上稳定，而不只是数据集上好看。</p>
+            <div class="tags"><span class="tag">标定</span><span class="tag">测量</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="med">
+          <div class="no">08</div>
+          <div>
+            <h3>医疗沉浸式多源建模</h3>
+            <p>把影像、生理信号、空间信息放进同一个可交互场景，用于术前规划与训练。先解决配准与实时性。</p>
+            <div class="tags"><span class="tag">多源融合</span><span class="tag">交互</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="mas">
+          <div class="no">09</div>
+          <div>
+            <h3>多智能体</h3>
+            <p>多机器人协同感知与任务分配。研究通信受限、目标冲突下的协作策略与可解释性。</p>
+            <div class="tags"><span class="tag">协同</span><span class="tag">规划</span></div>
+          </div>
+        </article>
+
+        <article class="dir" id="4d">
+          <div class="no">10</div>
+          <div>
+            <h3>4D 世界</h3>
+            <p>动态场景的时空重建与表示。关注重建质量与实时性的平衡，以及可编辑性。</p>
+            <div class="tags"><span class="tag">重建</span><span class="tag">时空表示</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><span class="idx">方法</span> <h2>每个方向都要过的四道关</h2></div></div>
+      <table>
+        <thead><tr><th>关卡</th><th>要求</th><th>不通过的后果</th></tr></thead>
+        <tbody>
+          <tr><td>基线</td><td>复现至少一个公开基线，指标差距 ≤5%</td><td>不进入改进阶段</td></tr>
+          <tr><td>对照</td><td>改进必须有同数据、同预算的对照实验</td><td>结果不计入考核</td></tr>
+          <tr><td>复现</td><td>仓库一条命令跑通，写清 seed 与硬件</td><td>不进入评审</td></tr>
+          <tr><td>交付</td><td>有文档、有汇报、有可交接的接口</td><td>不算完成</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

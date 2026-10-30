@@ -1,0 +1,55 @@
+/* Design tokens and document defaults. No external font or runtime dependency. */
+:root {
+  --paper: #faf9f6;
+  --surface: #f0eee8;
+  --white: #fffefa;
+  --ink: #202622;
+  --muted: #656b64;
+  --line: #dedfd5;
+  --line-strong: #b7bcae;
+  --accent: #843d35;
+  --accent-soft: #f1e7e1;
+  --button-radius: 10px;
+  --max: 1240px;
+  --serif: "Songti SC", "SimSun", "Noto Serif SC", Georgia, serif;
+  --sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --mono: "SFMono-Regular", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 110px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.8 var(--sans); text-rendering: optimizeLegibility; }
+::selection { background: var(--accent-soft); color: var(--accent); }
+a { color: inherit; text-decoration: none; text-underline-offset: 4px; }
+a:hover { color: var(--accent); }
+button, input { font: inherit; }
+button, summary { cursor: pointer; }
+button { color: inherit; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+figure { margin: 0; }
+button, input, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+[hidden] { display: none !important; }
+h1, h2, h3, h4, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
+h1 { font-size: clamp(32px, 4.1vw, 54px); line-height: 1.4; letter-spacing: -.035em; margin-bottom: 24px; }
+h2 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.4; margin-bottom: 20px; }
+h3 { font-size: 20px; line-height: 1.55; margin-bottom: 12px; overflow-wrap: anywhere; }
+p { margin-bottom: 16px; }
+strong { font-weight: 600; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.serif { font-family: var(--serif); }
+.eyebrow, .kicker { font: 11px/1.7 var(--mono); text-transform: uppercase; letter-spacing: .15em; color: var(--muted); }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--accent); flex-shrink: 0; }
+.lede { max-width: 720px; color: #50584f; font-size: 16px; line-height: 1.95; }
+.note { margin-top: 24px; }
+.note-tight { margin-top: 16px; }
+.intro { margin-bottom: 24px; }
+p.small a, p.muted a { text-decoration: underline; text-decoration-color: var(--line-strong); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

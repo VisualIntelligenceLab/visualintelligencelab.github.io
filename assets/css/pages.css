@@ -1,0 +1,89 @@
+/* Page-specific presentation; shared primitives live in components.css. */
+.home-hero { background: var(--paper); padding: 66px 0 46px; }
+.hero-layout { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 38px; }
+.home-hero h1 { font-size: clamp(34px, 4.1vw, 54px); line-height: 1.5; margin: 0 0 22px; }
+.home-hero h1 em { color: var(--accent); font-style: normal; }
+.home-hero .lede { max-width: 535px; font-size: 15px; }
+.hero-actions { display: flex; gap: 18px; align-items: center; margin-top: 28px; flex-wrap: wrap; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 32px; color: var(--muted); font-size: 11px; }
+.hero-meta span::before { content: "/"; margin-right: 8px; color: var(--line-strong); }
+.vision-figure { align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.vision-figure img { width: 100%; }
+.vision-figure figcaption { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 12px; color: var(--muted); font: 10px/1.7 var(--mono); letter-spacing: .04em; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
+.stats > div { display: flex; align-items: center; gap: 22px; padding: 28px 0; }
+.stats > div + div { padding-left: 36px; border-left: 1px solid var(--line); }
+.stats b { font: 42px/1 var(--serif); }
+.stats span { font-size: 12px; color: var(--muted); }
+.stats small { display: block; font: 9px/1.8 var(--mono); letter-spacing: .12em; margin-top: 3px; }
+.research-overview { gap: 0 48px; }
+.research-overview .card { position: relative; padding: 26px 0; border: 0; border-top: 1px solid var(--line); background: transparent; }
+.research-overview h3 { font-size: 24px; }
+.research-overview .kicker { display: flex; justify-content: space-between; }
+.research-overview .card-link { display: block; margin-top: 20px; font-size: 12px; color: var(--accent); }
+.research-overview .card-link:hover { text-decoration: underline; }
+.section-tint { background: var(--surface); }
+.research-index { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 36px; }
+.research-index a { padding: 7px 12px; border: 1px solid var(--line); border-radius: var(--button-radius); font-size: 12px; background: var(--white); }
+.research-index a:hover { background: var(--accent-soft); border-color: var(--accent); }
+.research { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.dir { display: grid; grid-template-columns: 34px 1fr; gap: 16px; padding: 32px 0; border-top: 1px solid var(--line); scroll-margin-top: 110px; }
+.dir:target { background: var(--accent-soft); box-shadow: 0 0 0 12px var(--accent-soft); }
+.dir .no { color: var(--accent); font: 12px/2 var(--mono); }
+.dir p { font-size: 14px; color: #50584f; margin-bottom: 0; }
+.dir .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.repo-grid .card { display: flex; flex-direction: column; border-top: 2px solid var(--accent); }
+.repo-grid h3 { font: 17px/1.5 var(--mono); }
+.repo-grid .repo-meta { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font: 11px var(--mono); }
+.person-card { display: grid; grid-template-columns: 72px 1fr; align-items: start; gap: 24px; }
+.person-initials { width: 72px; height: 86px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 30px var(--serif); }
+.portal-tools { margin-top: 36px; padding-bottom: 0; }
+.portal-tools label { display: block; font-size: 13px; margin-bottom: 10px; }
+.search-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.search-row input { width: min(100%, 520px); min-height: 48px; padding: 10px 16px; background: var(--white); border: 1px solid var(--line-strong); border-radius: 0; color: var(--ink); }
+.search-row input::placeholder { color: var(--muted); }
+.portal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.portal-grid a { position: relative; display: block; padding: 24px 38px 24px 24px; border: 1px solid var(--line); background: var(--white); transition: border-color .18s, background .18s; }
+.portal-grid a::after { content: "↗"; position: absolute; right: 18px; top: 23px; color: var(--accent); }
+.portal-grid a:hover { border-color: var(--accent); background: var(--accent-soft); }
+.portal-grid b { display: block; font-family: var(--serif); font-size: 18px; font-weight: 600; }
+.portal-grid span { display: block; margin-top: 9px; font-size: 12px; color: var(--muted); }
+.portal-grid .platform-account { font-family: var(--mono); font-size: 11px; overflow-wrap: anywhere; }
+.platform-pending { display: block; margin-bottom: 7px; font-size: 12px; color: var(--muted); }
+.platform-pending-card { padding: 24px; border: 1px dashed var(--line-strong); color: var(--muted); }
+.portal-empty { padding: 42px 24px; margin-top: 28px; border: 1px dashed var(--line-strong); text-align: center; color: var(--muted); }
+body[data-page="portal"] .resource-section { padding: 42px 0; border-top: 0; }
+@media (max-width: 1000px) {
+  .hero-layout { gap: 24px; }
+  .home-hero h1 { font-size: 40px; }
+  .stats > div { gap: 14px; }
+  .stats > div + div { padding-left: 24px; }
+  .portal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .hero-layout { grid-template-columns: 1fr; }
+  .home-hero h1 { font-size: clamp(30px, 6.7vw, 46px); }
+  .vision-figure { max-width: 480px; width: 100%; margin-inline: auto; }
+  .stats > div { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .stats > div + div { padding-left: 20px; }
+  .stats b { font-size: 34px; }
+  .research { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .home-hero { padding-top: 38px; }
+  .home-hero .eyebrow { font-size: 9px; }
+  .home-hero .lede { font-size: 14px; }
+  .hero-actions { gap: 12px; margin-top: 22px; }
+  .hero-meta { margin-top: 24px; font-size: 10px; }
+  .vision-figure { margin-top: 12px; }
+  .stats > div { padding-block: 22px; }
+  .stats > div + div { padding-left: 12px; }
+  .stats span { font-size: 10px; }
+  .stats small { font-size: 8px; letter-spacing: .02em; }
+  .research-overview h3 { font-size: 23px; }
+  .research-overview { gap: 0; }
+  .dir { grid-template-columns: 26px 1fr; gap: 12px; padding: 26px 0; }
+  .portal-grid { grid-template-columns: 1fr; gap: 12px; }
+  .person-card { grid-template-columns: 52px 1fr; gap: 18px; }
+  .person-initials { width: 52px; height: 66px; font-size: 24px; }
+}
