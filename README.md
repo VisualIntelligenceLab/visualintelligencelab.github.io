@@ -62,4 +62,6 @@ npm run check
 
 网站源码仓库：[VisualIntelligenceLab/visualintelligencelab.github.io](https://github.com/VisualIntelligenceLab/visualintelligencelab.github.io)。仓库包含全部页面、公共资源、维护文档及本地预览和检查脚本。仓库名遵循 GitHub Pages 对用户站点的小写命名要求。
 
+Gitee 镜像：[VisualIntelligenceLab/visualintelligencelab.github.io](https://gitee.com/VisualIntelligenceLab/visualintelligencelab.github.io)。日常开发在 GitHub 主仓进行，Gitee 通过 Pull 镜像获取代码。
+
 网站已通过 GitHub Pages 发布，官网地址：[https://visualintelligencelab.github.io/](https://visualintelligencelab.github.io/)。发布源为 `main` 分支的 `/ (root)` 目录，后续推送会自动更新网站。发布配置可在仓库 [Settings → Pages](https://github.com/VisualIntelligenceLab/visualintelligencelab.github.io/settings/pages) 中查看。
