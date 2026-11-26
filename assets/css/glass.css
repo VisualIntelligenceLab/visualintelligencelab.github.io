@@ -1,0 +1,87 @@
+/* Glass composites only on top of a scene. Text stays on a separate layer. */
+.glass {
+  --glass-tint: rgb(239 245 242 / 73%);
+  --glass-frost: rgb(239 245 242 / 90%);
+  --glass-solid: #eff5f2;
+  --glass-glint: rgb(255 255 255 / 78%);
+  --glass-border: rgb(76 115 110 / 24%);
+  position: relative;
+  z-index: 0;
+  border-radius: var(--button-radius);
+}
+.glass-clear {
+  --glass-tint: rgb(255 255 255 / 12%);
+  --glass-frost: rgb(45 72 80 / 93%);
+  --glass-solid: #2d4850;
+  --glass-border: rgb(228 239 235 / 32%);
+}
+.glass::before,
+.nav.is-open::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: var(--glass-solid);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 24px rgb(19 37 41 / 12%), inset 0 1px 0 var(--glass-glint);
+}
+@supports (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px)) {
+  .glass::before,
+  .nav.is-open::before {
+    background: var(--glass-frost);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+html[data-glass-renderer="refraction"]:not([data-glass-preview="frosted"]) .glass[data-refracts]::before,
+html[data-glass-renderer="refraction"]:not([data-glass-preview="frosted"]) .nav.is-open[data-refracts]::before {
+  background: var(--glass-tint);
+  backdrop-filter: var(--glass-map);
+}
+@supports (mask-composite: exclude) {
+  .glass::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    padding: 1px;
+    background: radial-gradient(circle at var(--glint-x, 35%) var(--glint-y, 0%), var(--glass-glint), transparent 62%);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+}
+.glass-press, .nav a, .btn {
+  transition: transform 420ms cubic-bezier(.2, .8, .26, 1.22), background-color 160ms, color 160ms;
+}
+.glass-press:active, .nav a:active, .btn:active {
+  transform: scale(.96);
+  transition-duration: 110ms;
+}
+.glass-press:disabled { opacity: .72; cursor: default; transform: none; }
+
+@media (max-width: 900px) {
+  .nav.is-open {
+    --glass-tint: rgb(239 245 242 / 86%);
+    --glass-frost: rgb(239 245 242 / 94%);
+    --glass-solid: #eff5f2;
+    --glass-glint: rgb(255 255 255 / 78%);
+    --glass-border: rgb(76 115 110 / 24%);
+  }
+  .nav.is-open::before { box-shadow: 0 16px 40px rgb(19 37 41 / 18%), inset 0 1px 0 var(--glass-glint); }
+}
+
+@media (prefers-reduced-transparency: reduce), (forced-colors: active) {
+  .glass::before,
+  .nav.is-open::before {
+    background: var(--glass-solid) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glass-press:active, .nav a:active, .btn:active { transform: none; }
+}

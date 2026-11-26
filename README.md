@@ -37,6 +37,8 @@ npm run dev
 
 访问终端输出的地址，默认为 `http://127.0.0.1:4173`。按 Ctrl+C 停止。也可执行 `node scripts/preview.mjs`；端口由环境变量 `PORT` 控制。
 
+请用本机预览地址体验首页三维色散棱镜。演示使用随站点部署的 Three.js 0.180.0（MIT），需要浏览器支持 WebGL 2。直接打开文件或 WebGL 2 不可用时，演示台显示二维色散图。
+
 ```sh
 npm run check
 ```

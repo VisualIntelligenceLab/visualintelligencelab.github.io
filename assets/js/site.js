@@ -21,7 +21,7 @@
     ['publications.html', 'publications', '成果与开源'],
     ['team.html', 'team', '团队'],
     ['join.html', 'join', '加入我们'],
-    ['portal.html', 'portal', '成员入口 ↗']
+    ['portal.html', 'portal', '成员入口']
   ];
   const nav = links.map(([href, key, label]) =>
     `<a href="${href}"${key === 'portal' ? ' class="nav-portal"' : ''}${key === page ? ' aria-current="page"' : ''}>${label}</a>`
@@ -29,15 +29,15 @@
 
   document.getElementById('site-header').innerHTML = `
     <header class="site-head">
-      <div class="wrap">
+      <div class="wrap glass" data-glass>
         <a class="brand" href="index.html" aria-label="智能视觉实验室首页">
-          <span class="brand-mark" aria-hidden="true">VIL</span>
+          <img class="brand-mark" src="assets/images/favicon.svg" width="42" height="42" alt="">
           <span class="brand-copy"><b>智能视觉实验室</b><small>Visual Intelligence Lab · HIT</small></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <button class="menu-toggle glass-press" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="menu-label">菜单</span><span class="menu-lines" aria-hidden="true"></span>
         </button>
-        <nav class="nav" id="site-nav" aria-label="主导航">${nav}</nav>
+        <nav class="nav" id="site-nav" aria-label="主导航" data-glass="sheet">${nav}</nav>
       </div>
     </header>`;
 

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const pages = new Set(['index.html', 'research.html', 'publications.html', 'team.html', 'join.html', 'portal.html']);
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.woff2': 'font/woff2' };
 const server = http.createServer(async (request, response) => {
   try {
     if (!['GET', 'HEAD'].includes(request.method)) {
@@ -19,7 +19,7 @@ const server = http.createServer(async (request, response) => {
     const filename = path.resolve(root, relative);
     const inside = path.relative(root, filename);
     if (inside.startsWith('..') || path.isAbsolute(inside) || relative.includes('\\') ||
-        (!pages.has(relative) && !/^assets\/(css|js|images)\//.test(relative))) {
+        (!pages.has(relative) && !/^assets\/(css|js|images|fonts)\//.test(relative))) {
       response.writeHead(404).end('Not found');
       return;
     }

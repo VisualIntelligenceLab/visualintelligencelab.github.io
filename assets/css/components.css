@@ -2,27 +2,28 @@
 .btn { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 24px; border: 1px solid var(--ink); border-radius: var(--button-radius); padding: 11px 21px; font-size: 13px; line-height: 1.6; transition: background .18s, color .18s; }
 .btn:hover { color: var(--paper); background: var(--ink); }
 .btn.accent { background: var(--accent); color: var(--paper); border-color: var(--accent); }
-.btn.accent:hover { background: #683029; border-color: #683029; }
+.btn.accent:hover { background: #214542; border-color: #214542; }
 .btn.text { border-color: transparent; padding-inline: 4px; }
 .btn.text:hover { color: var(--accent); background: transparent; text-decoration: underline; }
-.card { padding: 26px 28px; border: 1px solid var(--line); background: var(--white); }
+.card { padding: 24px; border: 1px solid var(--line); border-radius: var(--card-radius); background: var(--white); box-shadow: 0 4px 12px rgb(19 37 41 / 4%); }
 .card .kicker { margin-bottom: 18px; color: var(--accent); }
-.card p { font-size: 14px; color: #50584f; }
+.card p { font-size: 1rem; color: var(--muted); }
 .card > :last-child { margin-bottom: 0; }
-.tag { display: inline-block; padding: 3px 10px; border: 1px solid var(--line); color: var(--muted); background: var(--paper); font-size: 11px; }
+.tag { display: inline-block; padding: 3px 10px; border: 1px solid var(--line); border-radius: var(--button-radius); color: var(--muted); background: var(--paper); font-size: .75rem; }
 .news { border-top: 1px solid var(--line-strong); }
 .news a { display: grid; grid-template-columns: 122px 1fr auto; align-items: baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); transition: background .18s; }
 .news a:hover { background: var(--surface); }
 .news time { font: 11px/1.8 var(--mono); color: var(--muted); }
 .news .t { font-size: 14px; }
 .news .arrow { color: var(--accent); font-size: 12px; }
-.table-scroll { max-width: 100%; overflow-x: auto; border-top: 1px solid var(--line-strong); overscroll-behavior-x: contain; }
+.table-scroll { max-width: 100%; overflow-x: auto; background: var(--white); border: 1px solid var(--line); border-radius: var(--card-radius); overscroll-behavior-x: contain; }
+tbody tr:last-child td { border-bottom: 0; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { padding: 17px 18px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { background: var(--surface); color: var(--muted); font-size: 12px; font-weight: 500; white-space: nowrap; }
 td:first-child { font-weight: 500; }
 tbody tr:hover { background: var(--white); }
-.cta { margin-top: 12px; padding: 42px; border-left: 3px solid var(--accent); background: var(--surface); display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.cta { margin-top: 12px; padding: 32px; border: 1px solid var(--line); border-radius: var(--card-radius); background: var(--white); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .cta h2 { font-size: 26px; margin-bottom: 10px; }
 .cta p { font-size: 14px; margin: 0; }
 .cta .btn { flex-shrink: 0; overflow-wrap: anywhere; }

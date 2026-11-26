@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>成员入口 · 智能视觉实验室</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#faf9f6">
+<meta name="theme-color" content="#f3f2ed">
 <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -24,11 +24,15 @@
   </section>
 
   <div class="wrap portal-tools" role="search" aria-label="成员资源搜索" hidden>
-    <label for="resource-search">快速查找资源</label>
-    <div class="search-row">
-      <input id="resource-search" type="search" placeholder="搜索手册、资产、代码……" autocomplete="off" aria-controls="resource-results">
-      <button class="btn" id="resource-reset" type="button" hidden>清空</button>
-      <span class="small muted" id="resource-count" role="status" aria-live="polite"></span>
+    <div class="search-scene">
+      <label for="resource-search">快速查找资源</label>
+      <div class="search-row">
+        <div class="search-field glass" data-glass>
+          <input id="resource-search" type="search" placeholder="搜索手册、资产、代码……" autocomplete="off" aria-controls="resource-results">
+          <button class="glass-press" id="resource-reset" type="button" hidden>清空</button>
+        </div>
+        <span class="small muted" id="resource-count" role="status" aria-live="polite"></span>
+      </div>
     </div>
   </div>
   <div id="resource-results">
@@ -90,5 +94,6 @@
 
 <div id="site-footer"></div>
 <script src="assets/js/site.js"></script>
+<script src="assets/js/glass.js" defer></script>
 </body>
 </html>
